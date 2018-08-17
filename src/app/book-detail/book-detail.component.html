@@ -1,0 +1,30 @@
+<div class="container">
+<div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/books']"><mat-icon>list</mat-icon></a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><h2>{{book.title}}</h2></mat-card-title>
+    <mat-card-subtitle>{{book.description}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>Singer:</dt>
+      <dd>{{book.author}}</dd>
+      <dt>Publisher:</dt>
+      <dd>{{book.publisher}}</dd>
+      <dt>Publish Year:</dt>
+      <dd>{{book.published_year}}</dd>
+      <dt>Update Date:</dt>
+      <dd>{{book.updated_date | date}}</dd>
+      <dt>Singer photo:</dt>
+      <!-- <dd><img width="100" height="100" attr.src = '{{ image_server }}{{book.image_url}}'></dd> -->
+      <dd><img src="http://localhost:3000/images/{{book.image_url}}" style="width:100px; height: 100px;"></dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button color="primary" [routerLink]="['/book-edit', book._id]"><mat-icon>edit</mat-icon></a>
+    <a mat-raised-button color="warn" (click)="deleteBook(book._id)"><mat-icon>delete</mat-icon></a>
+  </mat-card-actions>
+</mat-card>
+</div>

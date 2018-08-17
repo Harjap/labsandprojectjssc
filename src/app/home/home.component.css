@@ -1,0 +1,23 @@
+.intro {
+    float: left;
+    display: block;
+    margin-right: 2.6455%;
+    width: 65.78483%;
+    margin-left: 17.10758%;
+    text-align: center;
+    padding: 2.4375em 0;
+}
+.page-header {
+   
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+#main { margin: 0 5%;
+    background-image: url(./../../assets/img/banner.jpg);
+    }
+    .mat-table {
+        background-color: transparent;
+    }
+    .mat-card-header{
+        background-color: transparent;
+    }
